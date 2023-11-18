@@ -47,24 +47,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  const cathegories = document.querySelectorAll('.cathegory');
-
-  cathegories.forEach(cathegory => {
-    cathegory.addEventListener('mouseenter', () => {
-      cathegories.forEach(otherCathegory => {
-        if (otherCathegory !== cathegory) {
-          otherCathegory.classList.add('js-cathegory');
-        }
-      });
-    });
-
-    cathegory.addEventListener('mouseleave', () => {
-      cathegories.forEach(otherCathegory => {
-        if (otherCathegory !== cathegory) {
-          otherCathegory.classList.remove('js-cathegory');
-        }
-      });
-    });
-  });
-});

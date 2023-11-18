@@ -7,6 +7,7 @@ a{
   text-decoration: none;
 }
 
+
 header {
   background: rgba(0, 0, 0, 0.5) url('/images/entete.jpg');
   background-size: cover;
@@ -116,9 +117,18 @@ nav ul li a:hover {
   color: gold;
 }
 
-
+/***************************** cathegories **************************/
 .products-section{
-  background: linear-gradient(silver 0%, rgb(0, 0, 0, 0.8) 3%, rgb(0, 0, 0) 50%, rgb(0, 0, 0, 0.8) 97%, silver 100%);
+  
+}
+.cathegories-container{
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient( silver 0%, rgb(0, 0, 0, 0.8) 3%, rgb(0, 0, 0) 50%, rgb(0, 0, 0, 0.8) 100%);
+  box-shadow: 0px 5px 10px black;
+}
+.products-section h2{
+  color: #e2e2e2;
 }
 .cathegories {
   display: flex;
@@ -126,41 +136,31 @@ nav ul li a:hover {
   align-items: center;
   flex-wrap: wrap;
 }
-
 .cathegory {
   margin-bottom: 50px;
   width: 100px;
   height: 160px;
   border-radius: 10px;
   transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
-  overflow: hidden; 
 }
-
 .cathegory img {
   object-fit: cover;
   width: 100px;
   height: 100px;
+  border: solid 1px #ffc741;
   border-radius: 10px;
-  box-shadow: rgba(255, 198, 66, 0.5) -2px 2px, rgba(255, 198, 66, 0.4) -4px 4px, rgba(255, 198, 66, 0.3) -6px 6px, rgba(255, 198, 66, 0.2) -8px 8px, rgba(255, 198, 66, 0.1) -10px 10px;
+  box-shadow: rgba(255, 198, 66, 0.5) -1px 2px, rgba(255, 198, 66, 0.4) -2px 4px, rgba(255, 198, 66, 0.3) -3px 6px, rgba(255, 198, 66, 0.2) -4px 8px, rgba(255, 198, 66, 0.1) -5px 10px;
   transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
 }
-
-.cathegory h3 {
+.cathegory h4 {
   display: flex;
   justify-content: center;
   color: #e2e2e2;
 }
-
 .cathegory:hover {
   width: 340px;
   height: 370px;
-  backdrop-filter: blur(5px);
 }
-
-.cathegory .js-cathegory {
-  backdrop-filter: blur(5px);
-}
-
 .cathegory:hover img {
   width: 340px;
   height: 320px;
@@ -176,26 +176,29 @@ nav ul li a:hover {
 
 /***************************** contact ***************************/
 
-form{
+.contactUs{
   display: flex;
   flex-direction: column;
   width: 60%;
   margin: auto;
 }
-form input, form textarea, form button{
-  padding: 20px;
+.contactUs input, .contactUs textarea, .contactUs button{
+  padding: 10px;
   margin-bottom: 20px;
   outline: none;
   border: none;
   background-color: #ddd;
 }
-form button{
+.contactUs button{
   background-color: #333;
   cursor: pointer;
   color: #fff;
 }
-h1{
+h2{
   text-align: center;
+}
+textarea {
+  resize: none;
 }
 
 
@@ -220,8 +223,8 @@ footer {
   margin: 10px;
 }
 
-.footer-section h2 {
-  color: #ffd700; /* Couleur dorée pour les titres */
+.footer-section h3 {
+  color: #ffd700;
 }
 
 .footer-bottom {

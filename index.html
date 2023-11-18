@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>B.Broderie</title>
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/styles/index.css">
 </head>
 <body>
   
@@ -25,62 +25,88 @@
     <div class="header-logo"><p class="logo">B.Broderie</p></div>
   </header>
 
-  <section class="products-section">
-    <div class="cathegories">
-      <a href="caftan.html">
-        <div class="cathegory js-cathegory cathegory-caftan">
-          <h3>Caftan</h3>
-          <img src="/images/caftan.jpg" alt="caftan">      
-        </div>
-      </a>
-      <a href="robe.html">
-        <div class="cathegory js-cathegory cathegory-robe">
-          <h3>Robe</h3>
-          <img src="/images/robe.jpg" alt="robe">  
-        </div>
-      </a>
-      <a href="carako.html">  
-        <div class="cathegory js-cathegory cathegory-carako">
-          <h3>Carako</h3>
-          <img src="/images/carako.jpg" alt="carako">  
-        </div>
-      </a>  
-      <a href="autre.html">
-        <div class="cathegory js-cathegory cathegory-autre">
-          <h3>Autre</h3>
-          <img src="/images/autre.jpg">  
-        </div>
-      </a>  
-    </div>
-  </section>
+  
+  <main class="products-section">
+    <section class="cathegories-container">
+      <h2>choose your path..</h2>
+      <div class="cathegories">
+        <a href="caftan.html">
+          <div class="cathegory cathegory-caftan">
+            <h4>Caftan</h4>
+            <img src="/images/caftan.jpg" alt="caftan">      
+          </div>
+        </a>
+        <a href="robe.html">
+          <div class="cathegory cathegory-robe">
+            <h4>Robe</h4>
+            <img src="/images/robe.jpg" alt="robe">  
+          </div>
+        </a>
+        <a href="carako.html">  
+          <div class="cathegory cathegory-carako">
+            <h4>Carako</h4>
+            <img src="/images/carako.jpg" alt="carako">  
+          </div>
+        </a>  
+        <a href="autre.html">
+          <div class="cathegory cathegory-autre">
+            <h4>Autre</h4>
+            <img src="/images/autre.jpg">  
+          </div>
+        </a>  
+      </div>  
+    </section>
+
+    <section class="products-container">
+      <h2>our products..</h2>
+
+      <!-- Exemple de produit 1 -->
+      <div class="product">
+        <img src="chemin/vers/image1.jpg" alt="Produit 1">
+        <h3>Produit 1</h3>
+        <p>Prix : $19.99</p>
+        <p>Quantité à commander : <input type="number" value="0" min="0"></p>
+      </div>
+
+      <!-- Exemple de produit 2 -->
+      <div class="product">
+        <img src="chemin/vers/image2.jpg" alt="Produit 2">
+        <h3>Produit 2</h3>
+        <p>Prix : $29.99</p>
+        <p>Quantité à commander : <input type="number" value="0" min="0"></p>
+      </div>
+    </section>
+
+  </main>
 
 
 
   <section class="Contact-section">
-    <h1>Contact Us..</h1>
-    <form action="#">
+    <h2>Contact Us..</h2>
+    <form class="contactUs" action="#">
       <input type="text" placeholder="Name.."/>
       <input type="email" placeholder="Email.."/>
-      <textarea cols="5" rows="5" placeholder="Your message.."></textarea>
+      <textarea rows="4" placeholder="Your message.."></textarea>
       <button type="submit">Send</button>
     </form>
   </section>
 
+
+
   <footer>
     <div class="footer-content">
-      <div class="footer-section about">
-        <h2>À propos de nous</h2>
-        <p>Nous sommes une entreprise dédiée à la broderie en tout genre... on peut tout broder meme les chats ^^
-          faites appel a nous, vous serez décus mais on s'en fou !!
+      <div class="footer-section">
+        <h3>À propos de nous</h3>
+        <p>Nous sommes une entreprise dédiée à la broderie en tout genre... on peut tout broder meme les chats !!
         </p>
       </div>
-      <div class="footer-section contact">
-        <h2>Contactez-nous</h2>
+      <div class="footer-section">
+        <h3>Contactez-nous</h3>
         <p>Email: omar@broderie.40</p>
         <p>Téléphone: +213 661 296 751</p>
       </div>
-      <div class="footer-section social">
-        <h2>Suivez-nous</h2>
+      <div class="footer-section">
+        <h3>Suivez-nous</h3>
         <p><a href="#">Facebook</a></p>
         <p><a href="#">Instagram</a></p>
         <p><a href="#">LinkedIn</a></p>
@@ -93,6 +119,6 @@
 
  
 
-  <script src="/script.js"></script>
+  <script src="/scripts/products.js"></script>
 </body>
 </html>
