@@ -1,0 +1,256 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+a{
+  text-decoration: none;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.5) url('/images/entete.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  color: #e2e2e2;
+  padding: 10px;
+  height: 300px;
+  box-shadow: 0px 5px 10px black;
+  margin-bottom: 10px;
+}
+
+.top-bar{
+  display: flex;
+  justify-content: space-around;
+  font-weight: bolder;
+}
+.cart-button{
+  background-color: transparent;
+  width: 160px;  
+  font-weight: bolder;
+  border: none;
+}
+.cart-button a{
+  color:#e2e2e2;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+.cart-button a:hover{
+  color: #ffc741;
+  cursor: pointer;
+}
+.cart-number{
+  margin-left: 5px;
+  padding: 0 6px 0px 6px;
+  border-radius: 50%;
+  background: black;
+  font-weight: bolder;
+}
+
+.tel{
+  margin-top: 3px;
+  font-weight: bolder;
+  width: 160px;
+}
+.tel a{
+  color: #e2e2e2;
+  display: flex;
+  align-items: center;
+}
+.tel a:hover{
+  color: rgb(64, 195, 81);
+  cursor: pointer;
+}
+.fb{
+  margin-top: 3px;
+  font-weight: bolder;
+  width: 160px;
+}
+.fb a{
+  color: #e2e2e2;
+  display: flex;
+  align-items: center;
+}
+.fb a:hover{
+  color: rgb(3, 155, 229);
+  cursor: pointer;
+}
+
+nav {
+  text-align: center;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+nav ul {
+  list-style-type: none;
+  margin-top: 10px;
+  padding: 0;
+}
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #e2e2e2;
+  font-weight: bold;
+}
+nav ul li a:hover {
+  color: #ffc741;
+  border-top: solid 1px #ffc741;
+  border-bottom: solid 1px rgb(255, 198, 66)
+}
+
+.header-logo{
+  margin: 10px auto;
+}
+.logo{
+  display: flex;
+  justify-content: center;
+  font-size: 60px;
+  color: gold;
+}
+
+
+.products-section{
+  background: linear-gradient(silver 0%, rgb(0, 0, 0, 0.8) 3%, rgb(0, 0, 0) 50%, rgb(0, 0, 0, 0.8) 97%, silver 100%);
+}
+.cathegories {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cathegory {
+  margin-bottom: 50px;
+  width: 100px;
+  height: 160px;
+  border-radius: 10px;
+  transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+  overflow: hidden; 
+}
+
+.cathegory img {
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  box-shadow: rgba(255, 198, 66, 0.5) -2px 2px, rgba(255, 198, 66, 0.4) -4px 4px, rgba(255, 198, 66, 0.3) -6px 6px, rgba(255, 198, 66, 0.2) -8px 8px, rgba(255, 198, 66, 0.1) -10px 10px;
+  transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+}
+
+.cathegory h3 {
+  display: flex;
+  justify-content: center;
+  color: #e2e2e2;
+}
+
+.cathegory:hover {
+  width: 340px;
+  height: 370px;
+  backdrop-filter: blur(5px);
+}
+
+.cathegory .js-cathegory {
+  backdrop-filter: blur(5px);
+}
+
+.cathegory:hover img {
+  width: 340px;
+  height: 320px;
+}
+
+
+
+
+
+
+
+
+
+/***************************** contact ***************************/
+
+form{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: auto;
+}
+form input, form textarea, form button{
+  padding: 20px;
+  margin-bottom: 20px;
+  outline: none;
+  border: none;
+  background-color: #ddd;
+}
+form button{
+  background-color: #333;
+  cursor: pointer;
+  color: #fff;
+}
+h1{
+  text-align: center;
+}
+
+
+
+
+/*************************** footer *******************************/
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 10px;
+}
+
+.footer-section h2 {
+  color: #ffd700; /* Couleur dorée pour les titres */
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 10px;
+  border-top: 1px solid #888;
+}
+
+.footer-section p {
+  line-height: 1.5;
+}
+
+.footer-section a {
+  color: #e2e2e2;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+.color1 {color: #ffc741;}
+.color2 {color: #ffff5b;}
+.color3 {color: #2c1700;}
+.color4 {color: #7b7672;}
+.color5 {color: #e2e2e2;}
