@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>B.Broderie</title>
   <link rel="stylesheet" href="/styles/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 <body>
   
@@ -26,41 +27,51 @@
   </header>
 
   
-  <main class="products-section">
-    <section class="cathegories-container">
-      <h2>choose your path..</h2>
-      <div class="cathegories">
-        <a href="caftan.html">
-          <div class="cathegory cathegory-caftan">
-            <h4>Caftan</h4>
-            <img src="/images/caftan.jpg" alt="caftan">      
+  <main>
+    <h2>welcome to our shop</h2>
+    <div class="cathegories-container">
+      <div id="slide">
+        <div class="item" style="background-image: url(/images/caftan.jpg);">
+          <div class="content">
+            <div class="name">Caftan</div>
+            <div class="description">Découvrez notre large gammme de caftan..</div>
+            <button>See more</button>
           </div>
-        </a>
-        <a href="robe.html">
-          <div class="cathegory cathegory-robe">
-            <h4>Robe</h4>
-            <img src="/images/robe.jpg" alt="robe">  
+        </div>
+        <div class="item" style="background-image: url(/images/carako.jpg);">
+          <div class="content">
+            <div class="name">Carako</div>
+            <div class="description">Découverez notre large gamme de carako..</div>
+            <button>See more</button>
           </div>
-        </a>
-        <a href="carako.html">  
-          <div class="cathegory cathegory-carako">
-            <h4>Carako</h4>
-            <img src="/images/carako.jpg" alt="carako">  
+        </div>
+        <div class="item" style="background-image: url(/images/robe.jpg);">
+          <div class="content">
+            <div class="name">Robe</div>
+            <div class="description">Découvrez notre large gamme de robes..</div>
+            <button>See more</button>
           </div>
-        </a>  
-        <a href="autre.html">
-          <div class="cathegory cathegory-autre">
-            <h4>Autre</h4>
-            <img src="/images/autre.jpg">  
+        </div>
+        <div class="item" style="background-image: url(/images/autre.jpg);">
+          <div class="content">
+            <div class="name">Autre</div>
+            <div class="description">Découverez notre large choix de broderie personnalisée..</div>
+            <button>See more</button>
           </div>
-        </a>  
-      </div>  
-    </section>
+        </div>
+      </div>
+      <div class="buttons">
+        <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
+        <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+      </div>
+    </div>
+  </main>
 
+
+<!-----------------------------------------------
     <section class="products-container">
-      <h2>our products..</h2>
+      <h2>you can like these..</h2>
 
-      <!-- Exemple de produit 1 -->
       <div class="product">
         <img src="chemin/vers/image1.jpg" alt="Produit 1">
         <h3>Produit 1</h3>
@@ -68,7 +79,6 @@
         <p>Quantité à commander : <input type="number" value="0" min="0"></p>
       </div>
 
-      <!-- Exemple de produit 2 -->
       <div class="product">
         <img src="chemin/vers/image2.jpg" alt="Produit 2">
         <h3>Produit 2</h3>
@@ -76,23 +86,25 @@
         <p>Quantité à commander : <input type="number" value="0" min="0"></p>
       </div>
     </section>
+    ----------------------------------------------->
+  
 
-  </main>
 
-
-
-  <section class="Contact-section">
-    <h2>Contact Us..</h2>
-    <form class="contactUs" action="#">
+  <section class="about-section">
+    <div class="about">
+      <h2>About Our Shop..</h2>
+      <div>
+        <p>Leader dans l'est du pays nous avons su donner plus d'un sourire a chaque client et cliente, nous sommes en exercice depuis 2017 et jamais nous n'avons fahi a notre tache ou déçu la moindre commande de nos chers clients et clientes..</p>
+      </div>
+    </div>  
+    <form class="contact" action="#">
       <input type="text" placeholder="Name.."/>
       <input type="email" placeholder="Email.."/>
       <textarea rows="4" placeholder="Your message.."></textarea>
       <button type="submit">Send</button>
     </form>
   </section>
-
-
-
+  
   <footer>
     <div class="footer-content">
       <div class="footer-section">
@@ -106,6 +118,13 @@
         <p>Téléphone: +213 661 296 751</p>
       </div>
       <div class="footer-section">
+        <h3>cathegory</h3>
+        <p>Caftan</p>
+        <p>Karako</p>
+        <p>Robe</p>
+        <p>Autre</p>
+      </div>
+      <div class="footer-section">
         <h3>Suivez-nous</h3>
         <p><a href="#">Facebook</a></p>
         <p><a href="#">Instagram</a></p>
@@ -116,8 +135,6 @@
       <p>&copy; 2023 Entreprise B.Broderie | Tous droits réservés</p>
     </div>
   </footer>
-
- 
 
   <script src="/scripts/products.js"></script>
 </body>
