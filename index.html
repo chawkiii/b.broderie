@@ -18,8 +18,8 @@
     <nav>
       <ul>
         <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
     </nav>
@@ -28,41 +28,88 @@
 
   
   <main>
-    <h2>welcome to our shop</h2>
-    <div class="cathegories-container">
-      <div id="slide">
-        <div class="item" style="background-image: url(/images/caftan.jpg);">
-          <div class="content">
-            <div class="name">Caftan</div>
-            <div class="description">Découvrez notre large gammme de caftan..</div>
-            <button>See more</button>
+    <div class="slider-container">
+      <input type="radio" name="slider" class="d-none" id="s1" checked>
+      <input type="radio" name="slider" class="d-none" id="s2">
+      <input type="radio" name="slider" class="d-none" id="s3">
+      <input type="radio" name="slider" class="d-none" id="s4">
+      <input type="radio" name="slider" class="d-none" id="s5">
+  
+      <div class="cards">
+        <label for="s1" id="slide1">
+          <div class="card">
+            <div class="image">
+              <img src="/images/autre.jpg" alt="">
+            </div>
+            <div class="infos">
+              <div class="cathegory-name">Autre</div>
+              <div class="cathegory-description">Lorem ipsum dolor sit amet, sit amet  adipiscing elit. Aenean vel ansd. Nullam
+                lorem. Nulla eu
+                sodales</div>
+            </div>
+            <a href="/contact" class="btn-contact">details</a>
           </div>
-        </div>
-        <div class="item" style="background-image: url(/images/carako.jpg);">
-          <div class="content">
-            <div class="name">Carako</div>
-            <div class="description">Découverez notre large gamme de carako..</div>
-            <button>See more</button>
+        </label>
+  
+        <label for="s2" id="slide2">
+          <div class="card">
+            <div class="image">
+              <img src="/images/robe.jpg" alt="">
+            </div>
+            <div class="infos">
+              <div class="cathegory-name">Robe</div>
+              <div class="cathegory-description">Lorem ipsum dolor sit amet, sit amet  adipiscing elit. Aenean vel ansd . Nullam
+                lorem. Nulla eu
+                sodales</div>
+            </div>
+            <a href="/contact" class="btn-contact">details</a>
           </div>
-        </div>
-        <div class="item" style="background-image: url(/images/robe.jpg);">
-          <div class="content">
-            <div class="name">Robe</div>
-            <div class="description">Découvrez notre large gamme de robes..</div>
-            <button>See more</button>
+        </label>
+  
+        <label for="s3" id="slide3">
+          <div class="card">
+            <div class="image">
+              <img src="/images/caftan.jpg" alt="">
+            </div>
+            <div class="infos">
+              <div class="cathegory-name">caftan</div>
+              <div class="cathegory-description">Lorem ipsum dolor sit amet, sit amet  adipiscing elit. Aenean vel ansd . Nullam
+                lorem. Nulla eu
+                sodales</div>
+            </div>
+            <a href="/contact" class="btn-contact">details</a>
           </div>
-        </div>
-        <div class="item" style="background-image: url(/images/autre.jpg);">
-          <div class="content">
-            <div class="name">Autre</div>
-            <div class="description">Découverez notre large choix de broderie personnalisée..</div>
-            <button>See more</button>
+        </label>
+  
+        <label for="s4" id="slide4">
+          <div class="card">
+            <div class="image">
+              <img src="/images/carako.jpg" alt="">
+            </div>
+            <div class="infos">
+              <div class="cathegory-name">carako</div>
+              <div class="cathegory-description">Lorem ipsum dolor sit amet, sit amet  adipiscing elit. Aenean vel ansd . Nullam
+                lorem. Nulla eu
+                sodales</div>
+            </div>
+            <a href="/contact" class="btn-contact">details</a>
           </div>
-        </div>
-      </div>
-      <div class="buttons">
-        <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
-        <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+        </label>
+  
+        <label for="s5" id="slide5">
+          <div class="card">
+            <div class="image">
+              <img src="/images/tissus-brod.jpg" alt="">
+            </div>
+            <div class="infos">
+              <div class="cathegory-name">tissus brod</div>
+              <div class="cathegory-description">Lorem ipsum dolor sit amet, sit amet  adipiscing elit. Aenean vel ansd . Nullam
+                lorem. Nulla eu
+                sodales</div>
+            </div>
+            <a href="/contact" class="btn-contact">details</a>
+          </div>
+        </label>
       </div>
     </div>
   </main>
