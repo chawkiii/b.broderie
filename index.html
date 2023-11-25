@@ -18,17 +18,19 @@
     <nav>
       <ul>
         <li><a href="#">Home</a></li>
+        <li><a href="#">Category</a></li>
         <li><a href="#">Products</a></li>
-        <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
     </nav>
-    <div class="header-logo"><p class="logo">B.Broderie</p></div>
+    <div class="header-logo">
+      <h1 class="logo">B.Broderie</h1>
+    </div>
   </header>
 
   
   <main>
-    <h2>cathegory</h2>
+    <h2>category</h2>
     <div class="slider-container">
       <input type="radio" name="slider" class="d-none" id="s1" checked>
       <input type="radio" name="slider" class="d-none" id="s2">
@@ -38,10 +40,10 @@
   
       <div class="cards">
         <label for="s1" id="slide1">
-          <img src="/images/autre.jpg" alt="">
+          <img src="/images/caftan.jpg" alt="">
           <div class="infos">
-            <div class="cathegory-name">Autre</div>
-            <div class="cathegory-description">Lorem ipsum dolor sit amet, sit amet  adipiscing elit. Aenean vel ansd. Nullam
+            <div class="category-name">Caftan</div>
+            <div class="category-description">Lorem ipsum dolor sit amet, sit amet  adipiscing elit. Aenean vel ansd. Nullam
             lorem. Nulla eu
             sodales</div>
           </div>
@@ -50,18 +52,18 @@
         <label for="s2" id="slide2">
           <img src="/images/robe.jpg" alt="">
           <div class="infos">
-            <div class="cathegory-name">Autre</div>
-            <div class="cathegory-description">Lorem ipsum dolor sit amet, sit amet  adipiscing elit. Aenean vel ansd. Nullam
+            <div class="category-name">Robe</div>
+            <div class="category-description">Lorem ipsum dolor sit amet, sit amet  adipiscing elit. Aenean vel ansd. Nullam
             lorem. Nulla eu
             sodales</div>
           </div>
         </label>
 
         <label for="s3" id="slide3">
-          <img src="/images/caftan.jpg" alt="">
+          <img src="/images/autre.jpg" alt="">
           <div class="infos">
-            <div class="cathegory-name">Autre</div>
-            <div class="cathegory-description">Lorem ipsum dolor sit amet, sit amet  adipiscing elit. Aenean vel ansd. Nullam
+            <div class="category-name">Autre</div>
+            <div class="category-description">Lorem ipsum dolor sit amet, sit amet  adipiscing elit. Aenean vel ansd. Nullam
             lorem. Nulla eu
             sodales</div>
           </div>
@@ -70,8 +72,8 @@
         <label for="s4" id="slide4">
           <img src="/images/carako.jpg" alt="">
           <div class="infos">
-            <div class="cathegory-name">Autre</div>
-            <div class="cathegory-description">Lorem ipsum dolor sit amet, sit amet  adipiscing elit. Aenean vel ansd. Nullam
+            <div class="category-name">Carako</div>
+            <div class="category-description">Lorem ipsum dolor sit amet, sit amet  adipiscing elit. Aenean vel ansd. Nullam
             lorem. Nulla eu
             sodales</div>
           </div>
@@ -80,72 +82,23 @@
         <label for="s5" id="slide5">
           <img src="/images/tissus-brod.jpg" alt="">
           <div class="infos">
-            <div class="cathegory-name">Autre</div>
-            <div class="cathegory-description">Lorem ipsum dolor sit amet, sit amet  adipiscing elit. Aenean vel ansd. Nullam
+            <div class="category-name">Tissus</div>
+            <div class="category-description">Lorem ipsum dolor sit amet, sit amet  adipiscing elit. Aenean vel ansd. Nullam
             lorem. Nulla eu
             sodales</div>
           </div>
         </label>
       </div>
     </div>
-    <div class="products-container">
-      <div class="product">
-        <img src="/products/pic-1.png" alt="Produit 1">
-        <h3>Produit 1</h3>
-        <p>Prix : $19.99</p>
-        <p>Quantité à commander : <input type="number" value="0" min="0"></p>
-      </div>
-
-      <div class="product">
-        <img src="/products/pic-2.png" alt="Produit 2">
-        <h3>Produit 2</h3>
-        <p>Prix : $29.99</p>
-        <p>Quantité à commander : <input type="number" value="0" min="0"></p>
-      </div>
-      <div class="product">
-        <img src="/products/pic-3.png" alt="Produit 1">
-        <h3>Produit 1</h3>
-        <p>Prix : $19.99</p>
-        <p>Quantité à commander : <input type="number" value="0" min="0"></p>
-      </div>
-
-      <div class="product">
-        <img src="/products/pic-4.png" alt="Produit 2">
-        <h3>Produit 2</h3>
-        <p>Prix : $29.99</p>
-        <p>Quantité à commander : <input type="number" value="0" min="0"></p>
-      </div>
-    </div>
+    <h2>Products</h2>
+    <div class="products-grid js-products-grid"></div>
   </main>
-
-
-<!-----------------------------------------------
-    <section class="products-container">
-      <h2>you can like these..</h2>
-
-      <div class="product">
-        <img src="chemin/vers/image1.jpg" alt="Produit 1">
-        <h3>Produit 1</h3>
-        <p>Prix : $19.99</p>
-        <p>Quantité à commander : <input type="number" value="0" min="0"></p>
-      </div>
-
-      <div class="product">
-        <img src="chemin/vers/image2.jpg" alt="Produit 2">
-        <h3>Produit 2</h3>
-        <p>Prix : $29.99</p>
-        <p>Quantité à commander : <input type="number" value="0" min="0"></p>
-      </div>
-    </section>
-    ----------------------------------------------->
-  
-
 
   <section class="about-section">
     <div class="about">
-      <h2>About Our Shop..</h2>
+      <h2>Contactez nous..</h2>
       <div>
-        <p>Leader dans l'est du pays nous avons su donner plus d'un sourire a chaque client et cliente, nous sommes en exercice depuis 2017 et jamais nous n'avons fahi a notre tache ou déçu la moindre commande de nos chers clients et clientes..</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia necessitatibus sunt dolore aliquam autem ab atque optio deserunt velit maxime. Non blanditiis esse voluptatum ipsa veniam ratione autem consequatur facere ad est doloremque laboriosam nisi consectetur sunt id voluptate nam eligendi reiciendis, incidunt quasi modi animi fugiat? Dolores dolorem alias voluptate eius. Illo facilis nemo reprehenderit voluptas. Est magni itaque perspiciatis ea exercitationem quod accusantium ducimus qui repellat aliquam optio aspernatur ab soluta voluptatum fugiat enim eos sequi dolore unde vitae suscipit neque veritatis, ut autem. Tempore vel accusantium sunt aperiam nulla, odio quaerat, numquam quam, impedit veniam minima ad!</p>
       </div>
     </div>  
     <form class="contact" action="#">
@@ -161,6 +114,7 @@
       <div class="footer-section">
         <h3>À propos de nous</h3>
         <p>Nous sommes une entreprise dédiée à la broderie en tout genre... on peut tout broder meme les chats !!
+          Leader dans l'est du pays nous avons su donner plus d'un sourire a chaque client et cliente, nous sommes en exercice depuis 2017 et jamais nous n'avons fahi a notre tache ou déçu la moindre commande de nos chers clients et clientes..
         </p>
       </div>
       <div class="footer-section">

@@ -17,7 +17,7 @@ header {
   background-blend-mode: multiply;
   color: #e2e2e2;
   padding: 10px;
-  height: 300px;
+  height: 360px;
   box-shadow: 0px 5px 10px black;
   margin-bottom: 50px;
 }
@@ -105,16 +105,16 @@ nav ul li a {
 nav ul li a:hover {
   color: #ffc741;
   border-top: solid 1px #ffc741;
-  border-bottom: solid 1px rgb(255, 198, 66)
+  border-bottom: solid 1px rgb(255, 198, 66);
 }
 
 .header-logo{
-  margin: 10px auto;
+  margin: 0px auto;
 }
 .logo{
   display: flex;
   justify-content: center;
-  font-size: 60px;
+  font-size: 100px;
   color: gold;
 }
 
@@ -123,16 +123,22 @@ nav ul li a:hover {
 main{
   background: #eee;
   margin-bottom: 50px;
-  padding-top: 30px;
-  box-shadow: 0px 5px 10px black;
+  padding-top: 0;
+  box-shadow: 0px 5px 10px rgb(43, 22, 0),
+              0px 0px 30px 10px rgba(43, 22, 0, 0.75) inset;
   display: flex;
   flex-direction: column;
+  border-radius: 10px;
 }
 main h2{
   color: black;
   font-size: 50px;
   text-align: center;
   font-weight: 900;
+  border-top: solid 1px #2c1700;
+  border-bottom: solid 1px #2c1700;
+  width: 400px;
+  margin: 30px auto;
 }
 .d-none{
   display: none;
@@ -149,7 +155,7 @@ main h2{
   position: relative;
   height: 660px;
   width: 400px;
-  margin: 30px auto;
+  margin: 0px auto;
   perspective: 1000px;
   transform-style: preserve-3d;
 }
@@ -178,14 +184,15 @@ main h2{
   text-align: start;
   padding: 20px;
   border-radius: 10px;
-  background: rgb(0, 0, 0, 0.7);
+  background: rgb(0, 0, 0, 0.4);
   position: absolute;
   top: 20%;
   right: 10%;
   left: 10%;
   opacity: 0;
+  backdrop-filter: blur(3px);
 }
-.infos .cathegory-name{
+.infos .category-name{
   text-align: center;
   font-size: 30px;
   color: #ffc741;
@@ -193,7 +200,7 @@ main h2{
   margin-bottom: 20px;
   transition: all .6s ease;
 }
-.infos .cathegory-description{
+.infos .category-description{
   font-size: 16px;
   color: #e2e2e2;
   letter-spacing: 3px;
@@ -262,23 +269,80 @@ main h2{
 
 /************************** Products **************************/
 
-.products-container{
-  border: solid 1px blue;
-  width: 90%;
-  margin: 30px auto;
-  padding: 30px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 80%;
+  margin: 0 auto 50px auto;
 }
-
-.product{
+@media (max-width: 800px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 575px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 450px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.product-container {
+  padding: 40px 25px 25px 25px;
+  border-right: 1px solid rgba(122, 117, 113, 0.5);
+  border-bottom: 1px solid rgba(122, 118, 115, 0.5);
   display: flex;
   flex-direction: column;
-  border: solid 1px red;
+}
+.product-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  margin-bottom: 20px;
+}
+.product-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+.product-name {
+  height: 40px;
+  margin: 0 auto 5px auto;
+}
+.product-price {
+  font-weight: 700;
+  margin: 0 auto 20px auto;
+}
+.product-quantity-container {
+  margin:0 auto;
 }
 
+.added-to-cart {
+  color: rgb(6, 125, 98);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+
+  /* At first, the "Added to cart" message will
+     be invisible. Use JavaScript to change the
+     opacity and make it visible. */
+  opacity: 0;
+}
+
+.added-to-cart img {
+  height: 20px;
+  margin-right: 5px;
+}
+
+.add-to-cart-button {
+  width: 100%;
+  padding: 8px;
+  border-radius: 50px;
+}
 
 
 

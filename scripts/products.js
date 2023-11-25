@@ -1,48 +1,168 @@
-/***********************************************************
-
-// Sample product data (replace this with your actual product data)
-const products = {
-  caftan: [
-    { name: "Caftan Product 1", price: 29.99 },
-    { name: "Caftan Product 2", price: 39.99 },
-    // Add more caftan products
-  ],
-  robe: [
-    { name: "Robe Product 1", price: 19.99 },
-    { name: "Robe Product 2", price: 29.99 },
-    // Add more robe products
-  ],
-  // Repeat for other categories
-};
-
-let cart = [];
-
-// Function to add a product to the cart
-function addToCart(category, productIndex) {
-  const selectedProduct = products[category][productIndex];
-  cart.push(selectedProduct);
-  updateCartCount();
-}
-
-// Function to update the cart count in the UI
-function updateCartCount() {
-  const cartCountElement = document.querySelector(".cart-number");
-  if (cartCountElement) {
-    cartCountElement.textContent = cart.length;
-  }
-}
-
-// Example: Add a click event listener to each product on the category page
-document.addEventListener("DOMContentLoaded", () => {
-  const caftanProducts = document.querySelectorAll(".cathegory-caftan");
-  caftanProducts.forEach((product, index) => {
-    product.addEventListener("click", () => addToCart("caftan", index));
+function formatPrice(price) {
+  let formattedPrice = (price / 100).toLocaleString('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
   });
+  formattedPrice = formattedPrice.replace(',', ' ');
+  formattedPrice = formattedPrice.replace('$', '');
+  return formattedPrice;
+}
 
-  // Add similar event listeners for other categories
+const products1 = [{
+  image: '/images/products/pic-1.png',
+  name: 'produit 01',
+  price: 1009090
+},{
+  image: '/images/products/pic-1.png',
+  name: 'produit 02',
+  price: 2009525
+},{
+  image: '/images/products/pic-1.png',
+  name: 'produit 03',
+  price: 7990000
+},{
+  image: '/images/products/pic-1.png',
+  name: 'produit 04',
+  price: 20919500
+}];
+
+const products2 = [{
+  image: '/images/products/pic-2.png',
+  name: 'produit 01',
+  price: 1009090
+},{
+  image: '/images/products/pic-2.png',
+  name: 'produit 02',
+  price: 2009525
+},{
+  image: '/images/products/pic-2.png',
+  name: 'produit 03',
+  price: 7990000
+},{
+  image: '/images/products/pic-2.png',
+  name: 'produit 04',
+  price: 20919500
+}];
+
+const products3 = [{
+  image: '/images/products/pic-3.png',
+  name: 'produit 01',
+  price: 1009090
+},{
+  image: '/images/products/pic-3.png',
+  name: 'produit 02',
+  price: 2009525
+},{
+  image: '/images/products/pic-3.png',
+  name: 'produit 03',
+  price: 7990000
+},{
+  image: '/images/products/pic-3.png',
+  name: 'produit 04',
+  price: 20919500
+}];
+
+const products4 = [{
+  image: '/images/products/pic-4.png',
+  name: 'produit 01',
+  price: 1009090
+},{
+  image: '/images/products/pic-4.png',
+  name: 'produit 02',
+  price: 2009525
+},{
+  image: '/images/products/pic-4.png',
+  name: 'produit 03',
+  price: 7990000
+},{
+  image: '/images/products/pic-4.png',
+  name: 'produit 04',
+  price: 20919500
+}];
+
+const products5 = [{
+  image: '/images/products/pic-1.png',
+  name: 'produit 01',
+  price: 1009090
+},{
+  image: '/images/products/pic-2.png',
+  name: 'produit 02',
+  price: 2009525
+},{
+  image: '/images/products/pic-3.png',
+  name: 'produit 03',
+  price: 7990000
+},{
+  image: '/images/products/pic-4.png',
+  name: 'produit 04',
+  price: 20919500
+}];
+
+function generateProductHTML(products) {
+  let productsHTML = '';
+  products.forEach((product) => {
+    productsHTML += `
+    <div class="product-container">
+    <div class="product-image-container">
+      <img class="product-image" src="${product.image}">
+    </div>
+    <div class="product-name limit-text-to-2-lines">
+      ${product.name}
+    </div>
+    <div class="product-price">
+      ${formatPrice(product.price)} DZD
+    </div>
+    <div class="product-quantity-container">
+      <select>
+        <option selected value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+    </div>
+    <div class="added-to-cart">
+      <img src="images/icons/checkmark.png">
+      Added
+    </div>
+    <button class="add-to-cart-button button-primary">
+      Add to Cart
+    </button>
+  </div>
+    `;
+  });
+  return productsHTML;
+}
+
+const radioInputs = document.querySelectorAll('input[name="slider"]');
+const productsGrid = document.querySelector('.js-products-grid');
+
+function generateAndDisplayProducts(index) {
+  let selectedProducts;
+  if (index === 0) {
+    selectedProducts = products1;
+  } else if (index === 1) {
+    selectedProducts = products2;
+  } else if (index === 2) {
+    selectedProducts = products3;
+  } else if (index === 3) {
+    selectedProducts = products4;
+  } else if (index === 4) {
+    selectedProducts = products5;
+  }
+  const html = generateProductHTML(selectedProducts);
+  productsGrid.innerHTML = html;
+}
+generateAndDisplayProducts(0);
+radioInputs.forEach((input, index) => {
+  input.addEventListener('change', () => {
+    generateAndDisplayProducts(index);
+  });
 });
-
-
-***************************************************************/
-
-
