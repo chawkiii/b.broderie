@@ -1,3 +1,4 @@
+// format price fucntion
 function formatPrice(price) {
   let formattedPrice = (price / 100).toLocaleString('en-US', {
     style: 'currency',
@@ -10,6 +11,8 @@ function formatPrice(price) {
   return formattedPrice;
 }
 
+
+// products list
 const products1 = [{
   image: '/images/products/pic-1.png',
   name: 'produit 01',
@@ -100,6 +103,8 @@ const products5 = [{
   price: 20919500
 }];
 
+
+// generate the products in the html page
 function generateProductHTML(products) {
   let productsHTML = '';
   products.forEach((product) => {
@@ -132,7 +137,8 @@ function generateProductHTML(products) {
       <img src="images/icons/checkmark.png">
       Added
     </div>
-    <button class="add-to-cart-button button-primary">
+    <button class="add-to-cart-button button-primary js-add-to-cart"
+    data-product-name="${product.name}">
       Add to Cart
     </button>
   </div>
@@ -141,6 +147,10 @@ function generateProductHTML(products) {
   return productsHTML;
 }
 
+
+
+
+// slider function
 const radioInputs = document.querySelectorAll('input[name="slider"]');
 const productsGrid = document.querySelector('.js-products-grid');
 
@@ -166,3 +176,32 @@ radioInputs.forEach((input, index) => {
     generateAndDisplayProducts(index);
   });
 });
+
+
+
+
+// add to cart button function
+document.querySelectorAll('.js-add-to-cart').forEach(
+  (button) => {
+    button.addEventListener('click', () => {
+      const productName = button.dataset.productName;
+      let matchingItem;
+
+      cart.forEach((item) => {
+        if (productName === item.productName) {
+        matchingItem = item;    
+        }
+      });
+
+      if (matchingItem) {
+        matchingItem.quantity += 1;
+      } else {
+        cart.push({
+          productName,
+          quantity: 1
+        });
+      }
+      
+      console.log(cart);
+    });
+  });
