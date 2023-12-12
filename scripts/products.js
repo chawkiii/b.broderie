@@ -152,6 +152,9 @@ function generateProductHTML(products, index) {
 
 
 
+
+
+
 // slider function
 const radioInputs = document.querySelectorAll('input[name="slider"]');
 const productsGrid = document.querySelector('.js-products-grid');
@@ -180,7 +183,6 @@ function generateAndDisplayProducts(index) {
       
       const productName = button.dataset.productName;
       const quantitySelector = document.querySelector(`.js-quantity-selector[data-product-name="${productName}"]`);
-      
       const quantity = Number(quantitySelector.value);
       let matchingItem;
 
@@ -206,6 +208,8 @@ function generateAndDisplayProducts(index) {
       });
 
       document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
+
+      console.log(cart);
     });
   });
 }

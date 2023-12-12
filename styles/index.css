@@ -10,7 +10,6 @@ a{
   text-decoration: none;
 }
 
-
 header {
   background: rgba(0, 0, 0, 0.5) url('/images/entete.jpg');
   background-size: cover;
@@ -82,6 +81,7 @@ header {
   cursor: pointer;
 }
 
+
 nav {
   text-align: center;
   height: 30px;
@@ -125,7 +125,6 @@ nav ul li a:hover {
 main{
   background: #eee;
   margin-bottom: 50px;
-  padding-top: 0;
   box-shadow: 0px 5px 10px rgb(43, 22, 0),
               0px 0px 30px 10px rgba(43, 22, 0, 0.75) inset;
   display: flex;
@@ -147,6 +146,7 @@ main h2{
 }
 .slider-container {
   width: 100%;
+  margin: 0 auto;
   display: flex;
   transform-style: preserve-3d;
   justify-content: center;
@@ -165,7 +165,6 @@ main h2{
   height: 30px;
   display: flex;
   border-radius: 50px;
-  margin: 0 25px;
   justify-content: center;
   align-items: center;
   cursor: pointer;
@@ -303,23 +302,42 @@ main h2{
   width: 90%;
   margin: 0 auto 50px;
 }
-/*****************************************************
-@media (max-width: 800px) {
+
+/**************** media screen ****************/
+@media (max-width: 1200px) {
   .products-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media (max-width: 575px) {
+
+@media (max-width: 900px) {
   .products-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .cards {
+    height: 500px;
+    width: 300px;
+  }
 }
-@media (max-width: 450px) {
+
+@media (max-width: 680px) {
+  .cards {
+    height: 400px;
+    width: 250px;
+  }
+}
+
+@media (max-width: 560px) {
   .products-grid {
     grid-template-columns: 1fr;
   }
+  .cards {
+    height: 350px;
+    width: 200px;
+  }
 }
-***************************************************/
+
+
 .product-container {
   padding: 0px 10px 20px;
   border-right: 1px solid rgba(122, 117, 113, 0.5);
@@ -332,20 +350,22 @@ main h2{
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
-  margin-bottom: 20px;
+  height: 160px;
+  margin: 20px auto;
 }
 .product-image {
   max-width: 100%;
   max-height: 100%;
+  object-fit: cover;
+  overflow: hidden;
 }
 .product-name {
   height: 40px;
-  margin: 0 auto 5px;
+  margin: 0 auto;
 }
 .product-price {
   font-weight: 700;
-  margin: 20px auto 20px;
+  margin: 0px auto 20px;
 }
 .product-quantity-container {
   margin: 0 auto;
