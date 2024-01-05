@@ -1,3 +1,6 @@
+import { cart } from "../data/cart.js";
+import { products1, products2, products3, products4, products5 } from "../data/products.js";
+
 // format price fucntion
 function formatPrice(price) {
   let formattedPrice = (price / 100).toLocaleString('en-US', {
@@ -57,8 +60,6 @@ function generateProductHTML(products, index) {
 }
 
 
-
-
 // slider function
 const radioInputs = document.querySelectorAll('input[name="slider"]');
 const productsGrid = document.querySelector('.js-products-grid');
@@ -115,3 +116,44 @@ function generateAndDisplayProducts(index) {
     });
   });
 }
+
+
+// slider cards functions
+document.querySelectorAll('.cards label').forEach((label, index) => {
+  label.addEventListener('click', () => {
+    indicators.forEach((indicator) => {
+      indicator.classList.remove('active');
+    });
+    indicators[index].classList.add('active');
+    radioInputs[index].checked = true;
+    generateAndDisplayProducts(index);
+    updateSliderIndicator(index);
+  });
+});
+
+// slider buttons functions
+indicators.forEach((indicator, index) => {
+  indicator.addEventListener('click', () => {
+    indicators.forEach((otherIndicator) => {
+      otherIndicator.classList.remove('active');
+    });
+    indicator.classList.add('active');
+    radioInputs[index].checked = true;
+    generateAndDisplayProducts(index);
+    updateSliderIndicator(index);
+  });
+});
+
+generateAndDisplayProducts(0);
+radioInputs.forEach((input, index) => {
+  input.addEventListener('change', () => {
+    generateAndDisplayProducts(index);
+  });
+});
+
+function updateSliderIndicator(index) {
+  indicators.forEach(indicator => indicator.classList.remove('active'));
+  indicators[index].classList.add('active');
+}
+
+
