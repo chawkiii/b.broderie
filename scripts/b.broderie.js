@@ -157,3 +157,4 @@ function updateSliderIndicator(index) {
 }
 
 
+console.log('GitHub');
