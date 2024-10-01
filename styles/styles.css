@@ -235,8 +235,9 @@ nav {
 .logo {
   display: flex;
   justify-content: center;
-  font-size: 100px;
-  color: gold;
+}
+.logo img {
+  width: 40rem;
 }
 
 /*************************** slider *****************************/
@@ -341,7 +342,7 @@ main h2 {
   font-family: "Lora", serif;
 }
 .infos .category-name {
-  font-size: 30px;
+  font-size: 2rem;
   color: #ffc741;
   letter-spacing: 5px;
   margin: 0px auto 20px;
@@ -443,8 +444,14 @@ main h2 {
 
 @media (max-width: 680px) {
   .cards {
-    height: 300px;
-    width: 200px;
+    height: 70vh;
+    width: 45vw;
+  }
+  .cards .infos {
+    font-size: 0.7rem;
+  }
+  .infos .category-name {
+    font-size: 1rem;
   }
 }
 
