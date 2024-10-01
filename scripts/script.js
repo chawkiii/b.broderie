@@ -156,5 +156,3 @@ function updateSliderIndicator(index) {
   indicators[index].classList.add('active');
 }
 
-
-console.log('GitHub');
