@@ -22,7 +22,7 @@ header {
   background-blend-mode: multiply;
   color: #e2e2e2;
   padding: 10px;
-  height: 360px;
+  height: 80vh;
   box-shadow: 0px 5px 10px black;
   margin-bottom: 50px;
 }
@@ -235,9 +235,11 @@ nav {
 .logo {
   display: flex;
   justify-content: center;
+  border: solid 1px red;
 }
 .logo img {
-  width: 40rem;
+  width: 90%;
+  max-width: 1200px;
 }
 
 /*************************** slider *****************************/
@@ -249,6 +251,8 @@ main {
   display: flex;
   flex-direction: column;
   border-radius: 10px;
+  border: solid 1px red;
+  width: 100%;
 }
 main h2 {
   color: black;
@@ -261,7 +265,7 @@ main h2 {
   margin: 50px auto;
 }
 .d-none {
-  display: none;
+  visibility: hidden;
 }
 .slider-container {
   width: 100%;
@@ -412,7 +416,21 @@ main h2 {
   box-shadow: 0 15px 35px 0 rgba(0, 0, 0, 45%);
   transform: translate3d(80%, 0, -240px);
 }
-
+@media (max-width: 900px) {
+  .slider-container {
+    width: 90%;
+  }
+  .cards {
+    height: 60vh;
+    width: 45vw;
+  }
+  .cards .infos {
+    font-size: 0.7rem;
+  }
+  .infos .category-name {
+    font-size: 1rem;
+  }
+}
 /************************** Products **************************/
 
 .products-grid {
@@ -429,29 +447,9 @@ main h2 {
   }
 }
 
-@media (max-width: 900px) {
-  .cards {
-    height: 600px;
-    width: 400px;
-  }
-}
-
 @media (max-width: 800px) {
   .products-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 680px) {
-  .cards {
-    height: 70vh;
-    width: 45vw;
-  }
-  .cards .infos {
-    font-size: 0.7rem;
-  }
-  .infos .category-name {
-    font-size: 1rem;
   }
 }
 
@@ -521,22 +519,33 @@ main h2 {
 }
 
 /***************************** about ***************************/
-.about-section {
+.about-contact {
   backdrop-filter: blur(5px);
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10px;
   display: flex;
+  width: 100%;
+  margin: 0 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px red;
 }
 .about {
-  width: 50%;
+  width: 45%;
   padding: 20px;
+  margin: auto;
+  text-align: justify;
+  max-width: 800px;
 }
 .contact {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 45%;
   margin: auto;
   padding: 20px;
+  max-width: 800px;
 }
 .contact input,
 .contact textarea,
@@ -560,46 +569,98 @@ textarea {
   resize: none;
 }
 
-/*************************** footer *******************************/
+@media (max-width: 680px) {
+  .about-contact {
+    flex-direction: column;
+  }
+  .about,
+  .contact {
+    width: 80%;
+  }
+}
 
+/*************************** footer *******************************/
 footer {
   background-color: #333;
-  color: #fff;
-  padding: 5px 0;
+  color: #ecf0f1;
+  padding: 40px 0;
+  font-family: Arial, sans-serif;
 }
 
 .footer-content {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .footer-section {
   flex: 1;
-  margin: 10px;
+  min-width: 250px;
+  margin: 10px 20px;
 }
 
 .footer-section h3 {
-  color: #ffd700;
+  color: #f39c12;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 10px 0;
+}
+
+.footer-section p,
+.footer-section ul {
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+
+.footer-section a {
+  color: #bdc3c7;
+  text-decoration: none;
+  display: inline-block;
+  margin: 5px 0;
+}
+
+.footer-section a:hover {
+  color: #f39c12;
+  text-decoration: underline;
+}
+
+.social-links a {
+  display: block;
+  margin: 5px 0;
+}
+
+.social-links a i {
+  margin-right: 8px;
 }
 
 .footer-bottom {
   text-align: center;
-  padding-top: 10px;
-  border-top: 1px solid #888;
+  padding-top: 20px;
+  border-top: 1px solid #7f8c8d;
+  font-size: 0.8em;
+  color: #bdc3c7;
 }
 
-.footer-section p {
-  line-height: 1.5;
-}
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.footer-section a {
-  color: #e2e2e2;
-  text-decoration: none;
-}
-
-.footer-section a:hover {
-  text-decoration: underline;
+  .footer-section {
+    margin: 20px 0;
+  }
 }
 
 .color1 {

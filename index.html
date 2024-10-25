@@ -1,165 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>B.Broderie</title>
-  <link rel="stylesheet" href="/styles/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-  <link rel="shortcut icon" href="/logo/brod-logo.png" type="image/x-icon">
-</head>
-<body>
-  
-  <header>
-    <div class="top-bar">
-      <div class="tel"><a href="#"><img src="/logo/icons8-whatsapp-48.png" alt="whatsapp">0661296751</a></div>
-      <button class="cart-button"><a href="#"><img src="/logo/icons8-cart-48.png" alt="cart">Cart<span class="cart-quantity js-cart-quantity">0</span></a></button>
-      <div class="fb"><a href="#"><img src="/logo/icons8-facebook-48.png" alt="facebook">Facebook</a></div> 
-    </div>
-    
-    
-    
-    <nav id="js-section-main">
-      <input id="menu-toggle" type="checkbox" />
-      <label class='menu-button-container' for="menu-toggle">
-        <div class='menu-button'></div>
-      </label>
-      <ul class="menu">
-        <li><a href="#js-section-main">Home</a></li>
-        <li><a href="#js-section-category">Category</a></li>
-        <li><a href="#js-section-products">Products</a></li>
-        <li><a href="#js-section-contact">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="header-logo">
-      <h1 class="logo"><img src="/logo/b.broderie.png" alt=""></h1>
-    </div>
-  </header>
-
-  
-  <main id="js-section-category">
-    <h2>category</h2>
-    <div class="slider-container">
-      <input type="radio" name="slider" class="d-none" id="s1" checked>
-      <input type="radio" name="slider" class="d-none" id="s2">
-      <input type="radio" name="slider" class="d-none" id="s3">
-      <input type="radio" name="slider" class="d-none" id="s4">
-      <input type="radio" name="slider" class="d-none" id="s5">
-
-      <div class="slider-indicators">
-        <div class="slider-indicator active" data-slide-index="1">Caftan</div>
-        <div class="slider-indicator" data-slide-index="2">Robe</div>
-        <div class="slider-indicator" data-slide-index="3">Autre</div>
-        <div class="slider-indicator" data-slide-index="4">Carako</div>
-        <div class="slider-indicator" data-slide-index="5">Tissus</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>B.Broderie</title>
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="shortcut icon" href="/logo/brod-logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <div class="top-bar">
+        <div class="tel">
+          <a href="#"
+            ><img
+              src="/logo/icons8-whatsapp-48.png"
+              alt="whatsapp"
+            />0661296751</a
+          >
+        </div>
+        <button class="cart-button">
+          <a href="#"
+            ><img src="/logo/icons8-cart-48.png" alt="cart" />Cart<span
+              class="cart-quantity js-cart-quantity"
+              >0</span
+            ></a
+          >
+        </button>
+        <div class="fb">
+          <a href="#"
+            ><img
+              src="/logo/icons8-facebook-48.png"
+              alt="facebook"
+            />Facebook</a
+          >
+        </div>
       </div>
-      
-  
-      <div class="cards">
-        <label for="s1" id="slide1">
-          <img src="/images/caftan.jpg" alt="">
-          <div class="infos">
-            <div class="category-name">Caftan</div>
-            <div class="category-description">Lorem ipsum dolor sit amet, sit amet  adipiscing elit. Aenean vel ansd. Nullam
-            lorem. Nulla eu
-            sodales</div>
-          </div>
-        </label>
 
-        <label for="s2" id="slide2">
-          <img src="/images/robe.jpg" alt="">
-          <div class="infos">
-            <div class="category-name">Robe</div>
-            <div class="category-description">Lorem ipsum dolor sit amet, sit amet  adipiscing elit. Aenean vel ansd. Nullam
-            lorem. Nulla eu
-            sodales</div>
-          </div>
+      <nav id="js-section-main">
+        <input id="menu-toggle" type="checkbox" />
+        <label class="menu-button-container" for="menu-toggle">
+          <div class="menu-button"></div>
         </label>
-
-        <label for="s3" id="slide3">
-          <img src="/images/autre.jpg" alt="">
-          <div class="infos">
-            <div class="category-name">Autre</div>
-            <div class="category-description">Lorem ipsum dolor sit amet, sit amet  adipiscing elit. Aenean vel ansd. Nullam
-            lorem. Nulla eu
-            sodales</div>
-          </div>
-        </label>
-
-        <label for="s4" id="slide4">
-          <img src="/images/carako.jpg" alt="">
-          <div class="infos">
-            <div class="category-name">Carako</div>
-            <div class="category-description">Lorem ipsum dolor sit amet, sit amet  adipiscing elit. Aenean vel ansd. Nullam
-            lorem. Nulla eu
-            sodales</div>
-          </div>
-        </label>
-
-        <label for="s5" id="slide5">
-          <img src="/images/tissus-brod.jpg" alt="">
-          <div class="infos">
-            <div class="category-name">Tissus</div>
-            <div class="category-description">Lorem ipsum dolor sit amet, sit amet  adipiscing elit. Aenean vel ansd. Nullam
-            lorem. Nulla eu
-            sodales</div>
-          </div>
-        </label>
+        <ul class="menu">
+          <li><a href="#js-section-main">Home</a></li>
+          <li><a href="#js-section-category">Category</a></li>
+          <li><a href="#js-section-products">Products</a></li>
+          <li><a href="#js-section-contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-logo">
+        <h1 class="logo"><img src="/logo/b.broderie.png" alt="" /></h1>
       </div>
-    </div>
-    <h2 id="js-section-products">Products</h2>
-    <div class="products-grid js-products-grid"></div>
-  </main>
+    </header>
 
-  <section id="js-section-contact">
-    <div class="about">
-      <h2>Contactez nous..</h2>
-      <div>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia necessitatibus sunt dolore aliquam autem ab atque optio deserunt velit maxime. Non blanditiis esse voluptatum ipsa veniam ratione</p>
+    <main>
+      <h2>category</h2>
+      <div class="slider-container">
+        <input type="radio" name="slider" class="d-none" id="s1" checked />
+        <input type="radio" name="slider" class="d-none" id="s2" />
+        <input type="radio" name="slider" class="d-none" id="s3" />
+        <input type="radio" name="slider" class="d-none" id="s4" />
+        <input type="radio" name="slider" class="d-none" id="s5" />
+
+        <div class="slider-indicators">
+          <div class="slider-indicator active" data-slide-index="1">Caftan</div>
+          <div class="slider-indicator" data-slide-index="2">Robe</div>
+          <div class="slider-indicator" data-slide-index="3">Autre</div>
+          <div class="slider-indicator" data-slide-index="4">Carako</div>
+          <div class="slider-indicator" data-slide-index="5">Tissus</div>
+        </div>
+
+        <div class="cards">
+          <label for="s1" id="slide1">
+            <img src="/images/caftan.jpg" alt="" />
+            <div class="infos">
+              <div class="category-name">Caftan</div>
+              <div class="category-description">
+                Lorem ipsum dolor sit amet, sit amet adipiscing elit. Aenean vel
+                ansd. Nullam lorem. Nulla eu sodales
+              </div>
+            </div>
+          </label>
+
+          <label for="s2" id="slide2">
+            <img src="/images/robe.jpg" alt="" />
+            <div class="infos">
+              <div class="category-name">Robe</div>
+              <div class="category-description">
+                Lorem ipsum dolor sit amet, sit amet adipiscing elit. Aenean vel
+                ansd. Nullam lorem. Nulla eu sodales
+              </div>
+            </div>
+          </label>
+
+          <label for="s3" id="slide3">
+            <img src="/images/autre.jpg" alt="" />
+            <div class="infos">
+              <div class="category-name">Autre</div>
+              <div class="category-description">
+                Lorem ipsum dolor sit amet, sit amet adipiscing elit. Aenean vel
+                ansd. Nullam lorem. Nulla eu sodales
+              </div>
+            </div>
+          </label>
+
+          <label for="s4" id="slide4">
+            <img src="/images/carako.jpg" alt="" />
+            <div class="infos">
+              <div class="category-name">Carako</div>
+              <div class="category-description">
+                Lorem ipsum dolor sit amet, sit amet adipiscing elit. Aenean vel
+                ansd. Nullam lorem. Nulla eu sodales
+              </div>
+            </div>
+          </label>
+
+          <label for="s5" id="slide5">
+            <img src="/images/tissus-brod.jpg" alt="" />
+            <div class="infos">
+              <div class="category-name">Tissus</div>
+              <div class="category-description">
+                Lorem ipsum dolor sit amet, sit amet adipiscing elit. Aenean vel
+                ansd. Nullam lorem. Nulla eu sodales
+              </div>
+            </div>
+          </label>
+        </div>
       </div>
-    </div>  
-    <form class="contact" action="#">
-      <input type="text" placeholder="Name.."/>
-      <input type="email" placeholder="Email.."/>
-      <textarea rows="4" placeholder="Your message.."></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
-  
-  <footer>
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>À propos de nous</h3>
-        <p>Nous sommes une entreprise dédiée à la broderie en tout genre... on peut tout broder meme les chats !!
-          Leader dans l'est du pays nous avons su donner plus d'un sourire a chaque client et cliente, nous sommes en exercice depuis 2017 et jamais nous n'avons fahi a notre tache ou déçu la moindre commande de nos chers clients et clientes..
+      <h2 class="products-title">Products</h2>
+      <div class="products-grid js-products-grid"></div>
+    </main>
+
+    <section class="about-contact">
+      <div class="about">
+        <h2>À propos de nous :</h2>
+        <div>
+          <p>
+            Nous sommes une entreprise spécialisée dans la broderie, offrant des
+            services sur mesure depuis 2017. Leader dans l'est du pays, nous
+            avons su satisfaire chaque client grâce à notre engagement envers la
+            qualité et le respect des délais. Notre mission est de toujours
+            livrer des résultats à la hauteur des attentes de nos clients, sans
+            jamais faillir à notre tâche.
+          </p>
+        </div>
+        <h2>Contactez-nous :</h2>
+        <p>
+          Si vous avez des questions ou souhaitez obtenir un devis pour vos
+          projets de broderie, n’hésitez pas à nous contacter via le formulaire
+          ci-dessous. Nous serons ravis de répondre à vos demandes et de vous
+          accompagner dans la réalisation de vos idées.
         </p>
       </div>
-      <div class="footer-section">
-        <h3>Contactez-nous</h3>
-        <p>Email: omar@broderie.40</p>
-        <p>Téléphone: +213 661 296 751</p>
-      </div>
-      <div class="footer-section">
-        <h3>cathegory</h3>
-        <p>Caftan</p>
-        <p>Karako</p>
-        <p>Robe</p>
-        <p>Autre</p>
-      </div>
-      <div class="footer-section">
-        <h3>Suivez-nous</h3>
-        <p><a href="#">Facebook</a></p>
-        <p><a href="#">Instagram</a></p>
-        <p><a href="#">LinkedIn</a></p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2023 Entreprise B.Broderie | Tous droits réservés</p>
-    </div>
-  </footer>
+      <form class="contact" action="#">
+        <input type="text" placeholder="Name.." />
+        <input type="tel" placeholder="Phone.." />
+        <textarea rows="6" placeholder="Your message.."></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
 
-  
-  <script type="module" src="/scripts/script.js"></script>
-  
-</body>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Contactez-nous</h3>
+          <p>
+            <i class="fas fa-envelope"></i> Email:
+            <a href="mailto:omar@broderie.40">omar@broderie.40</a>
+          </p>
+          <p>
+            <i class="fas fa-phone"></i> Téléphone:
+            <a href="tel:+213661296751">+213 661 296 751</a>
+          </p>
+        </div>
+        <div class="footer-section categories">
+          <h3>Catégories</h3>
+          <ul>
+            <li>Caftan</li>
+            <li>Karako</li>
+            <li>Robe</li>
+            <li>Autre</li>
+          </ul>
+        </div>
+        <div class="footer-section follow-us">
+          <h3>Suivez-nous</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Entreprise B.Broderie | Tous droits réservés</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/scripts/script.js"></script>
+  </body>
 </html>
